@@ -3,6 +3,8 @@ import './styles/App.scss';
 import Navbar from './components/layout/Navbar';
 import Students from './components/students/Students';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Student from './components/students/Student';
+import StudentForm from './components/students/StudentForm';
 
 
 var App = ()=>{
@@ -13,6 +15,8 @@ var App = ()=>{
       <Navbar />
       <Switch>
         <Route exact path='/' component={Students} ></Route>
+        <Route exact path='/student/:id' component={Student} />
+        <Route exact path='/studentForm/:id?' component={StudentForm} />
       </Switch>
      
       </div>
