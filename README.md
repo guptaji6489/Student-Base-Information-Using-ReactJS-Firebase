@@ -1,3 +1,14 @@
+install--
+1-bootstrap
+2-react-router-dom
+3-node-sass
+4-redux
+5- react-redux
+6- firebase
+7- react-redux-firebase
+8- redux-firestore
+9- redux-devtools-extension
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
