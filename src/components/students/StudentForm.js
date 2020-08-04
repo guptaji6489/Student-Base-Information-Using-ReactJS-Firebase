@@ -88,7 +88,7 @@ const StudentForm = () => {
                       <Input
                         placeholder="Language Known"
                         name="address2"
-                        value={student.standard}
+                        value={student.address2}
                         onChange={onInputChange}
                       />
                     </div>

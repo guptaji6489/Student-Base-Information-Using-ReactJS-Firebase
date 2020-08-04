@@ -58,8 +58,8 @@ const Student = () => {
                         <p>email: {student.email}</p>
                         <p>phone: {student.phone}</p>
                         <p>standard: {student.standard}</p>
-                        <p>address 1: {student.address}</p>
-                        <p>address 2: {student.language}</p>
+                        <p>address 1: {student.address1}</p>
+                        <p>address 2: {student.address2}</p>
                       </li>
                     </ul>
                   </div>
