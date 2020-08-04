@@ -64,8 +64,8 @@ const StudentForm = () => {
                   onChange={onInputChange}/>
                 </div>
               <div className="col-md-6">
-              <Input placeholder="Enter Student Standard"
-                  name="standard"
+              <Input placeholder="Language Known"
+                  name="address2"
                   value={student.standard} 
                   onChange={onInputChange}/>
                  </div>
