@@ -1,6 +1,6 @@
 // rafce
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import Input from "../layout/Input";
 import { useFirestore } from "react-redux-firebase";
@@ -9,6 +9,7 @@ const StudentForm = () => {
   const firestore = useFirestore();
   let history = useHistory();
   const { id } = useParams();
+  const docRef= id? firestore.collection("students").doc(id):null;
   const [student, setStudent] = useState({
     name: "",
     email: "",
@@ -18,12 +19,36 @@ const StudentForm = () => {
     address2: "",
   });
 
+  useEffect(()=>{
+    if(id)
+    {
+      loadStudent();
+    }
+  },[id]);
+
+  const loadStudent= async ()=>{
+    try {
+      const result = await docRef.get();
+      if(result.exists)
+      {
+        setStudent(result.data());
+      }
+      else{
+        console.log("No Such Students!")
+      }
+      
+    } catch (error) {
+      console.log("error");
+    }
+  }
+
   const onInputChange = (e) => {
     setStudent({ ...student, [e.target.name]: e.target.value });
   };
-  const submitForm = (e) => {
+  const submitForm =async (e) => {
     e.preventDefault();
     if (id) {
+      await docRef.update({ ...student, updatedAt: firestore.FieldValue.serverTimestamp() });
     } else {
       firestore
         .collection("students")
