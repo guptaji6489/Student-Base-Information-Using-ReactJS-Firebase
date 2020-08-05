@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Avatar from '../layout/Avatar'
-import { useFirestoreConnect } from "react-redux-firebase";
+import { useFirestoreConnect,useFirestore } from "react-redux-firebase";
 import {useSelector} from 'react-redux';
 
 
 const Students = () => {
+  const firestore = useFirestore();
   const students = useSelector((state)=>state.firestore.ordered.students);
   useFirestoreConnect([
     {
@@ -16,6 +17,15 @@ const Students = () => {
   {
     return <h1>Loading...</h1>
   }
+
+    const deleteStudent = async (id) =>{
+      try {
+        await firestore.collection("students").doc(id).delete();
+      } catch (error) {
+        alert("Something Wrong!!");                                                               
+      }
+    }       
+
     return (
         <div className="container">
   <div className="py-4">
@@ -31,7 +41,7 @@ const Students = () => {
       <Link to={`/student/${student.id}`} className="btn btn-primary btn-profile">
         View Profile
       </Link>
-      <button className="btn btn-edit">
+      <button className="btn btn-edit" onClick={()=>deleteStudent(student.id)}>
         <span className="material-icons">delete_outline</span>
       </button>
     </div>

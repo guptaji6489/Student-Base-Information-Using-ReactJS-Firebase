@@ -4,7 +4,7 @@ import Avatar from '../layout/Avatar';
 import {useFirestore} from 'react-redux-firebase';
 
 const Student = () => {
-    const firestore = useFirestore();
+                                                                                                      const firestore = useFirestore();
     const {id} = useParams();
     const [student, setStudent] = useState(null);
 
