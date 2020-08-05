@@ -20,26 +20,14 @@ const Navbar = () => {
         </li>
         <li className="nav-item dropdown">
           <a
-            className="nav-a dropdown-toggle"
-            href="!#"
-            id="navbarDropdown"
-            data-toggle="dropdown"
+    
+            href="https://harshit-gupta.netlify.app/"
+            target="_blank"
           >
           <img src={imgg} height="30px"  alt="admin"  />
             <span className="ml-2 navbar-text">Harshit Gupta</span>
           </a>
-          <div className="dropdown-menu">
-            <a className="dropdown-item" href="!#">
-              Profile
-            </a>
-            <a className="dropdown-item" href="!#">
-              Logout
-            </a>
-            <div className="dropdown-divider"></div>
-            <a className="dropdown-item" href="!#">
-              Ads
-            </a>
-          </div>
+          
         </li>
       </ul>
     </div>
