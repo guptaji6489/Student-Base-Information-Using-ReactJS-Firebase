@@ -1,4 +1,4 @@
-install--
+install--these dependencies
 1-bootstrap
 2-react-router-dom
 3-node-sass
