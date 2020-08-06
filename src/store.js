@@ -11,14 +11,7 @@ import {composeWithDevTools} from 'redux-devtools-extension';
 import { createFirestoreInstance, firestoreReducer } from 'redux-firestore' // <- needed if using firestore
  
 const fbConfig = {
-    apiKey: "AIzaSyDbLB7IKdtm8fVq0nHe1fkK3csS9Ca2FV0",
-    authDomain: "studentbase-b49bc.firebaseapp.com",
-    databaseURL: "https://studentbase-b49bc.firebaseio.com",
-    projectId: "studentbase-b49bc",
-    storageBucket: "studentbase-b49bc.appspot.com",
-    messagingSenderId: "921726524719",
-    appId: "1:921726524719:web:a7dae1f2392ef47ffb95da",
-    measurementId: "G-X17066RMDX"
+    // add here from firebase
 }
  
 // react-redux-firebase config
