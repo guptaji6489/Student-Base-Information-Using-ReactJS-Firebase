@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams, Link, useHistory} from "react-router-dom";
+import { useParams, Link, useHistory,Redirect } from "react-router-dom";
 import Avatar from "../layout/Avatar";
 import { useFirestore } from "react-redux-firebase";
 import img from '../../assets/22.jpg';
@@ -33,13 +33,13 @@ const Student = () => {
   }
 
   const deleteStudent = ( standard) => {
-    let pass = parseInt(prompt("Enter password"));
-    if (pass === parseInt(standard)) {
+    let pass = prompt("Enter password");
+    if (pass == parseInt(standard)) {
       console.log(pass);
       return;
     } else {
-    alert(" Wrong Password")
-    history.goBack();
+    
+    return ;
     }
   };
   return (
@@ -56,7 +56,7 @@ const Student = () => {
                   <ul className="list-group">
                     <li className="d-flex justify-content-between align-items-center list-group-item list-group-item-action">
                       <h3 className="m-0">{student.name}</h3>
-                      <Link className="btn btn-primary" onClick={()=>deleteStudent(student.standard)} to={`/studentForm/${id}`}>
+                      <Link className="btn btn-primary" onClick={() =>deleteStudent( student.standard)  } to={`/studentForm/${id}`}>
                         Edit
                       </Link>
                     </li>

@@ -64,60 +64,67 @@ const StudentForm = () => {
             <div className="col-md-10 mx-auto">
               <div className="card card-body shadow">
                 <form onSubmit={submitForm}>
-                  <div className="form-row form-group mb-4">
-                    <div className="col-md-6">
+                  {/* <div className="form-row form-group mb-4"> */}
+                    <div className="col-md-12">
                       <Input
                         placeholder="Enter Student Name"
+                        type="text"
                         name="name"
                         value={student.name}
                         onChange={onInputChange}
-                      />
+                      /><br></br>
                     </div>
-                    <div className="col-md-6">
+                    <div className="col-md-12">
                       <Input
                         placeholder="Enter Student E-mail"
                         name="email"
+                        type="email"
                         value={student.email}
                         onChange={onInputChange}
-                      />
+                      /><br></br>
                     </div>
-                  </div>
-                  <div className="form-row form-group mb-4">
-                    <div className="col-md-6">
+                  {/* </div> */}
+                  {/* <div className="form-row form-group mb-4"> */}
+                  <div className="col-md-12">
                       <Input
-                        placeholder="Enter Student Phone"
-                        name="phone"
-                        value={student.phone}
-                        onChange={onInputChange}
-                      />
-                    </div>
-                    <div className="col-md-6">
-                      <Input
-                        placeholder="Enter Student Standard"
+                        placeholder="Enter Password"
                         name="standard"
+                        type="number"
                         value={student.standard}
                         onChange={onInputChange}
-                      />
+                      /><br></br>
                     </div>
-                  </div>
-                  <div className="form-row form-group">
-                    <div className="col-md-6">
+                    <div className="col-md-12">
+                      <Input
+                        placeholder="Whatsapp/Calling No"
+                        name="phone"
+                        type="number"
+                        value={student.phone}
+                        onChange={onInputChange}
+                      /><br></br>
+                    </div>
+                    
+                  {/* </div> */}
+                  {/* <div className="form-row form-group"> */}
+                    <div className="col-md-12">
                       <Input
                         placeholder="Enter Student Address"
                         name="address1"
+                        type="text"
                         value={student.address1}
                         onChange={onInputChange}
-                      />
+                      /><br></br>
                     </div>
-                    <div className="col-md-6">
+                    <div className="col-md-12">
                       <Input
-                        placeholder="Language Known"
+                        placeholder="Technical Language Known"
                         name="address2"
+                        type="text"
                         value={student.address2}
                         onChange={onInputChange}
-                      />
+                      /><br></br>
                     </div>
-                  </div>
+                  {/* </div> */}
 
                   <button type="submit" className="btn btn-primary">
                     {id ? "Update Student" : "Add Student"}

@@ -11,6 +11,7 @@ const Input = (props) => {
                   value={value} 
                   className="form-control"
                   onChange={onChange}
+                  required
                 />
         </div>
     )

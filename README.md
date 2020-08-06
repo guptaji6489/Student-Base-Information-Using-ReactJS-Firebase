@@ -9,6 +9,8 @@ install--these dependencies
 8- redux-firestore
 9- redux-devtools-extension
 
+then npm start
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
